@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="إرسال وتحديث أسعار المنتجات إلى ڤولتا عبر WhatsApp">
+
+    <title>إرسال الأسعار | ڤولتا</title>
+
+
+    <!-- =====================================
+         GOOGLE FONT
+    ====================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!-- =====================================
+         CSS
+    ====================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/prices.css">
+
+    <link rel="stylesheet" href="css/cart.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Prices Responsive مستقل -->
+    <link rel="stylesheet" href="css/prices-responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    V
+                </span>
+
+                <span class="logo-text">
+                    ڤولتا
+                </span>
+
+            </a>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+
+                <!-- CART -->
+
+                <button type="button" class="cart-button" id="cartButton" aria-label="فتح السلة">
+
+                    🛒
+
+                    <span id="cartCount">
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- DARK MODE -->
+
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="تغيير الوضع">
+
+                    🌙
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main class="prices-page">
+
+        <div class="container">
+
+
+            <!-- =================================
+                 BACK BUTTON
+            ================================== -->
+
+            <a href="index.html" class="back-link">
+
+                <span class="back-icon">
+                    →
+                </span>
+
+                <span>
+                    العودة للرئيسية
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================
+                 PAGE HERO
+            ================================== -->
+
+            <section class="prices-hero">
+
+
+                <div class="prices-hero-content">
+
+
+                    <span class="section-label">
+                        VOLTA / PRICES
+                    </span>
+
+
+                    <h1>
+                        إرسال الأسعار
+                    </h1>
+
+
+                    <p>
+                        أرسل أسعار المنتجات أو أي تحديث جديد بسهولة، وسيتم استلام البيانات مباشرة عبر WhatsApp.
+                    </p>
+
+
+                    <div class="prices-hero-features">
+
+                        <span>
+                            ✓ إرسال سريع
+                        </span>
+
+                        <span>
+                            ✓ تنظيم واضح
+                        </span>
+
+                        <span>
+                            ✓ إرسال عبر WhatsApp
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- HERO ICON -->
+
+                <div class="prices-hero-icon">
+                    💰
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 PRICES CONTENT
+            ================================== -->
+
+            <section class="prices-layout">
+
+
+                <!-- =================================
+                     MAIN FORM CARD
+                ================================== -->
+
+                <div class="prices-card">
+
+
+                    <!-- CARD HEADER -->
+
+                    <div class="prices-card-top">
+
+
+                        <div class="prices-card-icon">
+                            💰
+                        </div>
+
+
+                        <div>
+
+                            <span class="prices-card-label">
+                                PRICE UPDATE
+                            </span>
+
+                            <h2>
+                                بيانات الأسعار
+                            </h2>
+
+                            <p>
+                                اختر القسم وأدخل تفاصيل الأسعار المطلوبة.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         FORM
+                    ================================== -->
+
+                    <form id="pricesForm" class="prices-form">
+
+
+                        <!-- =================================
+                             SECTION
+                        ================================== -->
+
+                        <div class="form-group">
+
+
+                            <label>
+                                اختر القسم
+                            </label>
+
+
+                            <div class="section-options">
+
+
+                                <!-- CAFE -->
+
+                                <label class="section-option">
+
+                                    <input
+                                        type="radio"
+                                        name="priceSection"
+                                        value="الكافيه"
+                                        required
+                                    >
+
+                                    <span class="section-option-content">
+
+                                        <span class="section-option-icon">
+                                            ☕
+                                        </span>
+
+                                        <span>
+
+                                            <strong>
+                                                الكافيه
+                                            </strong>
+
+                                            <small>
+                                                Cafe
+                                            </small>
+
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+
+                                <!-- RESTAURANT -->
+
+                                <label class="section-option">
+
+                                    <input
+                                        type="radio"
+                                        name="priceSection"
+                                        value="المطعم"
+                                    >
+
+                                    <span class="section-option-content">
+
+                                        <span class="section-option-icon">
+                                            🍽️
+                                        </span>
+
+                                        <span>
+
+                                            <strong>
+                                                المطعم
+                                            </strong>
+
+                                            <small>
+                                                Restaurant
+                                            </small>
+
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+
+                                <!-- FACTORY -->
+
+                                <label class="section-option">
+
+                                    <input
+                                        type="radio"
+                                        name="priceSection"
+                                        value="المصنع"
+                                    >
+
+                                    <span class="section-option-content">
+
+                                        <span class="section-option-icon">
+                                            🏭
+                                        </span>
+
+                                        <span>
+
+                                            <strong>
+                                                المصنع
+                                            </strong>
+
+                                            <small>
+                                                Factory
+                                            </small>
+
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+
+                                <!-- GENERAL -->
+
+                                <label class="section-option">
+
+                                    <input
+                                        type="radio"
+                                        name="priceSection"
+                                        value="عام"
+                                    >
+
+                                    <span class="section-option-content">
+
+                                        <span class="section-option-icon">
+                                            📦
+                                        </span>
+
+                                        <span>
+
+                                            <strong>
+                                                عام
+                                            </strong>
+
+                                            <small>
+                                                General
+                                            </small>
+
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             PRICE DETAILS
+                        ================================== -->
+
+                        <div class="form-group">
+
+
+                            <div class="label-row">
+
+                                <label for="priceDetails">
+                                    تفاصيل الأسعار
+                                </label>
+
+                                <span>
+                                    المنتجات والأسعار
+                                </span>
+
+                            </div>
+
+
+                            <textarea id="priceDetails" name="priceDetails" rows="10" required placeholder="مثال:
+
+سكر — 35 جنيه / كيلو
+لبن — 45 جنيه / لتر
+قهوة — 280 جنيه / كيلو
+مياه معدنية — 10 جنيه / عبوة
+
+اكتب كل منتج وسعره في سطر منفصل..."></textarea>
+
+
+                            <small class="textarea-hint">
+                                يمكنك إضافة أكثر من منتج في نفس الرسالة.
+                            </small>
+
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             SEND BUTTON
+                        ================================== -->
+
+                        <button type="submit" class="prices-submit">
+
+
+                            <!-- SEND ICON -->
+
+                            <span class="send-icon">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M22 2 11 13"
+                                    />
+
+                                    <path
+                                        d="m22 2-7 20-4-9-9-4Z"
+                                    />
+
+                                </svg>
+
+                            </span>
+
+
+
+                            <!-- BUTTON TEXT -->
+
+                            <span class="send-content">
+
+                                <strong>
+                                    إرسال الأسعار
+                                </strong>
+
+                                <small>
+                                    سيتم فتح WhatsApp مباشرة
+                                </small>
+
+                            </span>
+
+
+
+                            <!-- ARROW -->
+
+                            <span class="send-arrow">
+                                ←
+                            </span>
+
+
+                        </button>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         CART OVERLAY
+    ====================================== -->
+
+    <div id="cartOverlay">
+
+
+        <aside id="cartDrawer">
+
+
+            <!-- CART HEADER -->
+
+            <div class="cart-header">
+
+
+                <div class="cart-header-info">
+
+
+                    <div class="cart-header-icon">
+                        🛒
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            السلة
+                        </h2>
+
+                        <p>
+                            المنتجات المطلوبة
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <button id="cartClose" type="button" aria-label="إغلاق السلة">
+                    ×
+                </button>
+
+
+            </div>
+
+
+
+            <!-- CART ITEMS -->
+
+            <div id="cartItems"></div>
+
+
+
+            <!-- CART FOOTER -->
+
+            <div class="cart-footer">
+
+
+                <div class="cart-total">
+
+                    <span class="cart-total-label">
+                        إجمالي الكميات
+                    </span>
+
+
+                    <span id="cartTotalItems" class="cart-total-number">
+                        0
+                    </span>
+
+                </div>
+
+
+                <button id="sendOrder" type="button">
+                    📱 إرسال الطلب
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         TOAST
+    ====================================== -->
+
+    <div id="toast"></div>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="js/cart.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/prices.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+
+</html>
